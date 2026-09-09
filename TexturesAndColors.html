@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Textures and Colors — CNA Samples</title>
+<meta name="description" content="The XNA Shader Series 2 sample ported to C++ with CNA: combining lighting, vertex colour and texture colour in one shader.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1 class="site-title"><a href="index.html">CNA Samples</a></h1>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="detail-head">
+    <h1>Textures and Colors</h1>
+  </div>
+  <p class="origin">Ported from Microsoft's XNA 4.0 <em>Shader Series 2: Textures and Colors Sample</em>.</p>
+
+  <img class="shot" src="assets/img/textures-and-colors.png" width="802" height="480"
+       alt="A lit, textured sphere rendered by the sample’s LightingModColorModTexture technique.">
+
+  <a class="play" href="TexturesAndColors/TexturesAndColors_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
+  <p class="play-note">Opens in a new tab and runs in this browser. Click the canvas first so it receives the keyboard.</p>
+
+  <section>
+    <h2>About this sample</h2>
+    <p>
+      A pixel's final colour can come from anywhere. This sample takes three sources — the lighting
+      calculation, the colour stored per vertex, and the colour sampled from a texture — and cycles through
+      the ways they can be combined.
+    </p>
+    <p>
+      It opens on the ordinary case, all three multiplied together the way a lit textured model usually looks.
+      Stepping through the techniques then pulls them apart: each element on its own, then simple pairs, then
+      alternative combinations of all three. Seeing the same mesh under each in turn is the point — the
+      arithmetic is arbitrary, and the sample is an argument for treating it that way.
+    </p>
+    <p>
+      It is the second sample in the Shader Series and builds on Vertex Lighting, adding HLSL textures and
+      samplers, uniform boolean parameters, and per-vertex colours. The technique named
+      <em>LightingOnly</em> is the one that matches the earlier sample's effect.
+    </p>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <table class="controls">
+      <tr><th>Action</th><th>Keyboard</th><th>Gamepad</th></tr>
+      <tr><td>Rotate the camera</td><td><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd></td><td>Right stick</td></tr>
+      <tr><td>Rotate the mesh</td><td>Arrow keys</td><td>Left stick</td></tr>
+      <tr><td>Zoom in</td><td><kbd>Z</kbd></td><td><kbd>A</kbd></td></tr>
+      <tr><td>Zoom out</td><td><kbd>X</kbd></td><td><kbd>B</kbd></td></tr>
+      <tr><td>Next shader technique</td><td><kbd>Space</kbd></td><td><kbd>Y</kbd></td></tr>
+      <tr><td>Next 3D model</td><td><kbd>Tab</kbd></td><td><kbd>X</kbd></td></tr>
+      <tr><td>Exit</td><td><kbd>Esc</kbd></td><td><kbd>Back</kbd></td></tr>
+    </table>
+    <p class="play-note">
+      <kbd>Space</kbd> is the interesting one: it is what walks through the combinations the sample exists to
+      show. In the browser, exiting ends the sample rather than closing the tab.
+    </p>
+  </section>
+
+  <nav class="pager">
+    <a class="prev" href="Primitives3D.html"><span class="label">Previous</span>← Primitives 3D</a>
+    <span></span>
+  </nav>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>
+      The sample is Microsoft's, published under the Microsoft Permissive License.
+      The C++ port and the WebAssembly build are CNA.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

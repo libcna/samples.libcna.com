@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primitives — CNA Samples</title>
+<meta name="description" content="The XNA Primitives sample ported to C++ with CNA: drawing points, lines and triangles through a Begin/End batch.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1 class="site-title"><a href="index.html">CNA Samples</a></h1>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="detail-head">
+    <h1>Primitives</h1>
+  </div>
+  <p class="origin">Ported from Microsoft's XNA 4.0 <em>Primitives Sample</em>.</p>
+
+  <img class="shot" src="assets/img/primitives.png" width="853" height="480"
+       alt="A starfield with two Spacewar ships and a sun, drawn entirely from points and lines.">
+
+  <a class="play" href="PrimitivesSample/PrimitivesSample_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
+  <p class="play-note">Opens in a new tab and runs in this browser. Click the canvas first so it receives the keyboard.</p>
+
+  <section>
+    <h2>About this sample</h2>
+    <p>
+      Spacewar's retro mode draws everything with points and lines. This sample takes the idea further and
+      builds <code>PrimitiveBatch</code>, a small layer over <code>GraphicsDevice.DrawUserPrimitives</code>
+      that lets you draw points, lines and triangles without setting up a vertex buffer for each shape.
+    </p>
+    <p>
+      It follows the same Begin/End pattern as <code>SpriteBatch</code>: call <code>Begin</code>, call
+      <code>AddVertex</code> as many times as you need, then <code>End</code>. Internally the batch fills an
+      array of vertices and flushes it to the graphics device whenever the array runs out of room, so the
+      number of draw calls stays low however many shapes you add.
+    </p>
+    <p>
+      That makes it useful for more than drawing a game. Arbitrary primitives on demand are exactly what you
+      want when visualising collision volumes, spatial partitions or any other piece of state that is easier
+      to see than to read.
+    </p>
+    <p>The sample itself draws a scene from Spacewar to show the batch in use.</p>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <p>The sample runs on its own; the only control is how to leave it.</p>
+    <table class="controls">
+      <tr><th>Action</th><th>Keyboard</th><th>Gamepad</th></tr>
+      <tr><td>Exit</td><td><kbd>Esc</kbd></td><td><kbd>Back</kbd></td></tr>
+    </table>
+    <p class="play-note">
+      In the browser, exiting ends the sample rather than closing the tab — close the tab yourself when
+      you are done.
+    </p>
+  </section>
+
+  <nav class="pager">
+    <span></span>
+    <a class="next" href="Primitives3D.html"><span class="label">Next</span>Primitives 3D →</a>
+  </nav>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>
+      The sample is Microsoft's, published under the Microsoft Permissive License.
+      The C++ port and the WebAssembly build are CNA.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

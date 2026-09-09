@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primitives 3D — CNA Samples</title>
+<meta name="description" content="The XNA Primitives 3D sample ported to C++ with CNA: reusable cube, sphere, cylinder, torus and teapot geometry.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1 class="site-title"><a href="index.html">CNA Samples</a></h1>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="detail-head">
+    <h1>Primitives 3D</h1>
+  </div>
+  <p class="origin">Ported from Microsoft's XNA 4.0 <em>Primitives 3D Sample</em>.</p>
+
+  <img class="shot" src="assets/img/primitives-3d.png" width="800" height="480"
+       alt="A dark red three-dimensional cube on a blue background, with the on-screen control hints.">
+
+  <a class="play" href="Primitives3D/Primitives3D_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
+  <p class="play-note">Opens in a new tab and runs in this browser. Click the canvas first so it receives the keyboard.</p>
+
+  <section>
+    <h2>About this sample</h2>
+    <p>
+      Five geometric primitives — a cube, a sphere, a cylinder, a torus and the Utah teapot — each built as a
+      small, self-contained class you can lift straight into a project. Press a key and the sample cycles
+      through them, through a set of colours, and between solid and wireframe drawing.
+    </p>
+    <p>
+      Every primitive class offers two constructors. The short one gives sensible defaults and a shape one unit
+      across; the longer one lets you choose the size and, for everything except the cube, how many triangles to
+      tessellate the surface into — the trade between a smooth silhouette and a cheap one.
+    </p>
+    <p>
+      Their real value is in debugging. A bounding sphere or a bounding box is far easier to judge when you can
+      see it drawn as a translucent or wireframe model in the scene it belongs to, and these classes are the
+      quickest way to put one there.
+    </p>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <table class="controls">
+      <tr><th>Action</th><th>Keyboard</th><th>Gamepad</th></tr>
+      <tr><td>Change primitive</td><td><kbd>A</kbd></td><td><kbd>A</kbd></td></tr>
+      <tr><td>Change colour</td><td><kbd>B</kbd></td><td><kbd>B</kbd></td></tr>
+      <tr><td>Toggle wireframe</td><td><kbd>Y</kbd></td><td><kbd>Y</kbd></td></tr>
+      <tr><td>Exit</td><td><kbd>Esc</kbd></td><td><kbd>Back</kbd></td></tr>
+    </table>
+    <p class="play-note">
+      On the original Windows Phone build the same three actions were the top, bottom-left and bottom-right of
+      the screen. In the browser, exiting ends the sample rather than closing the tab.
+    </p>
+  </section>
+
+  <nav class="pager">
+    <a class="prev" href="PrimitivesSample.html"><span class="label">Previous</span>← Primitives</a>
+    <a class="next" href="TexturesAndColors.html"><span class="label">Next</span>Textures and Colors →</a>
+  </nav>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>
+      The sample is Microsoft's, published under the Microsoft Permissive License.
+      The C++ port and the WebAssembly build are CNA.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

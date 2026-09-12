@@ -7,6 +7,7 @@
     --ink: #14181d;
     --ink-soft: #5b6570;
     --accent: #1f6feb;
+    --accent-soft: #eaf2ff;
     --accent-ink: #ffffff;
     --shadow: 0 1px 2px rgba(20, 24, 29, .06), 0 8px 24px rgba(20, 24, 29, .06);
     --radius: 10px;
@@ -20,6 +21,7 @@
         --ink: #e7ebf0;
         --ink-soft: #9aa5b1;
         --accent: #4c8dff;
+        --accent-soft: #162746;
         --accent-ink: #0f1216;
         --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .35);
     }
@@ -67,6 +69,23 @@ a { color: var(--accent); }
 }
 
 /* ---------- gallery ---------- */
+
+.progress-note {
+    margin: 0 0 32px;
+    padding: 20px 22px;
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    background: var(--accent-soft);
+}
+
+.progress-note h2 {
+    margin: 0 0 6px;
+    font-size: 20px;
+}
+
+.progress-note p { margin: 0 0 10px; }
+
+.repo-link { font-weight: 600; }
 
 .gallery {
     display: grid;
@@ -132,7 +151,13 @@ a { color: var(--accent); }
 .origin {
     color: var(--ink-soft);
     font-size: 14px;
+    margin: 0 0 4px;
+}
+
+.sample-source {
     margin: 0 0 24px;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .shot {

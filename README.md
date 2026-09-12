@@ -24,8 +24,9 @@ is Emscripten's own shell, unmodified.
 2. Copy the four bundle files into a directory named after the sample.
 3. Crop a representative screenshot to the game canvas — no browser chrome, no Emscripten shell —
    and save it plus a thumbnail under `assets/img/`.
-4. Write `<Sample>.html` from the original XNA documentation: what the sample teaches, and its
-   controls.
+4. Write `<Sample>.html` from the original XNA documentation: what the sample teaches, its
+   controls, and a direct source link to
+   `https://github.com/libcna/cna-samples/tree/develop/samples/<Sample>`.
 5. Add a card to `index.html`, and fix the previous/next links on the neighbouring detail pages.
 
 ## Checking a bundle before publishing it

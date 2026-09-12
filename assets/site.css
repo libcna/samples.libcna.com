@@ -262,6 +262,7 @@ kbd {
     color: inherit;
     font-size: inherit;
     font-weight: inherit;
+    text-align: center;
     opacity: 1;
     margin-bottom: 4px;
     padding-bottom: 4px;

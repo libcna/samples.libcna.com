@@ -260,9 +260,9 @@ kbd {
 .pager .label {
     display: block;
     color: inherit;
-    font-size: 12px;
-    font-weight: 400;
-    opacity: .8;
+    font-size: inherit;
+    font-weight: inherit;
+    opacity: 1;
 }
 
 .pager-before-about {

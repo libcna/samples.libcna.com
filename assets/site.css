@@ -263,6 +263,9 @@ kbd {
     font-size: inherit;
     font-weight: inherit;
     opacity: 1;
+    margin-bottom: 4px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(190, 196, 204, .8);
 }
 
 .pager-before-about {

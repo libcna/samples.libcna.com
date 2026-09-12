@@ -18,9 +18,12 @@ is Emscripten's own shell, unmodified.
 
 ## Adding a sample
 
-1. Build the sample's WEBGL2 bundle **in Release**. A Debug bundle carries DWARF sections and runs
-   to 90 MB or more; GitHub Pages rejects a file over 100 MB and the rest is wasted bandwidth
-   anyway. `Primitives3D` was 93.5 MB as Debug and is 8.0 MB as Release.
+1. Build the sample's WEBGL2 bundle **in Release with Emscripten threads disabled**. A Debug bundle
+   carries DWARF sections and runs to 90 MB or more; GitHub blocks regular Git objects over 100 MB,
+   and the rest is wasted bandwidth anyway. GitHub Pages also cannot set the COOP/COEP headers
+   required by pthread builds. Configure samples with
+   `-DCNA_SAMPLES_ENABLE_EMSCRIPTEN_THREADS=OFF`; `Primitives3D` was 93.5 MB as Debug and is 7.3 MB
+   as a non-threaded Release WASM.
 2. Copy the four bundle files into a directory named after the sample.
 3. Crop a representative screenshot to the game canvas — no browser chrome, no Emscripten shell —
    and save it plus a thumbnail under `assets/img/`.
@@ -35,9 +38,9 @@ is Emscripten's own shell, unmodified.
 # Release bundles have no DWARF. A non-zero count here means it is a Debug build.
 grep -ac debug_info <Sample>/<Sample>_cna_samples.wasm
 
-# GitHub Pages cannot set COOP/COEP headers, so a bundle that needs SharedArrayBuffer
-# will not start there. All three current bundles report 0.
-grep -c SharedArrayBuffer <Sample>/<Sample>_cna_samples.js
+# GitHub Pages cannot set COOP/COEP headers, so pthread/shared-memory runtime markers
+# must all be absent. A valid static bundle reports 0.
+grep -aEc 'PThread|shared:true|emscripten_thread' <Sample>/<Sample>_cna_samples.js
 ```
 
 ## Licence

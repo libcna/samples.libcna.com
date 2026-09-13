@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Input Reporter — CNA Samples</title>
+<meta name="description" content="The XNA Input Reporter ported to C++ with CNA: live state and capability data for up to four gamepads.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1 class="site-title"><a href="index.html">CNA Samples</a></h1>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="detail-head">
+    <h1>Input Reporter</h1>
+  </div>
+  <p class="origin">Ported from Microsoft's XNA 4.0 <em>Input Reporter</em>.</p>
+  <p class="sample-source">
+    <a href="https://github.com/libcna/cna-samples/tree/develop/samples/InputReporter">Source for this sample on GitHub ↗</a>
+  </p>
+
+  <img class="shot" src="assets/img/input-reporter.png" width="853" height="480"
+       alt="Live axes, triggers, buttons, D-pad and capability values for controller one.">
+
+  <a class="play" href="InputReporter/InputReporter_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
+  <p class="play-note">Opens in a new tab and runs in this browser. Click the canvas first so it receives the keyboard.</p>
+
+  <nav class="pager pager-before-about" aria-label="Sample navigation">
+    <a class="prev" href="ShapeRendering.html"><span class="label">Previous</span>Shape Rendering</a>
+    <span></span>
+  </nav>
+
+  <section>
+    <h2>About this sample</h2>
+    <p>
+      Input Reporter displays the complete XNA <code>GamePadState</code> and
+      <code>GamePadCapabilities</code> data for up to four connected controllers. The Ring of
+      Light shows which devices are connected, and pressing a digital button selects the first
+      active controller whose live values should be shown.
+    </p>
+    <p>
+      Axes, triggers, D-pad directions, buttons, packet numbers, controller type and vibration
+      support all use the same names as the XNA API. Unsupported controls are dimmed, while active
+      values use a bold font, making this a useful way to inspect how different accessories map to
+      XNA's common gamepad model.
+    </p>
+    <p>
+      START and BACK use the sample's charging switches: they must stay held for two seconds before
+      changing the dead-zone mode or exiting. This leaves every button available for inspection
+      without immediately triggering an application action.
+    </p>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <table class="controls">
+      <tr><th>Action</th><th>Keyboard</th><th>Gamepad</th></tr>
+      <tr><td>Select an active controller</td><td>—</td><td>Press any digital button</td></tr>
+      <tr><td>Toggle dead-zone mode</td><td><kbd>Space</kbd></td><td>Hold <kbd>Start</kbd> for 2 seconds</td></tr>
+      <tr><td>Exit</td><td><kbd>Esc</kbd></td><td>Hold <kbd>Back</kbd> for 2 seconds</td></tr>
+    </table>
+    <p class="play-note">In the browser, exiting ends the sample rather than closing the tab.</p>
+  </section>
+
+  <nav class="pager">
+    <a class="prev" href="ShapeRendering.html"><span class="label">Previous</span>Shape Rendering</a>
+    <span></span>
+  </nav>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>
+      The sample is Microsoft's, published under the Microsoft Permissive License.
+      The C++ port and the WebAssembly build are CNA.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

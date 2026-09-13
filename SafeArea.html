@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Safe Area — CNA Samples</title>
+<meta name="description" content="The XNA Safe Area sample ported to C++ with CNA: title-safe layout, aligned text and camera scrolling.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1 class="site-title"><a href="index.html">CNA Samples</a></h1>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="detail-head">
+    <h1>Safe Area</h1>
+  </div>
+  <p class="origin">Ported from Microsoft's XNA 4.0 <em>Safe Area</em>.</p>
+  <p class="sample-source">
+    <a href="https://github.com/libcna/cna-samples/tree/develop/samples/SafeArea">Source for this sample on GitHub ↗</a>
+  </p>
+
+  <img class="shot" src="assets/img/safe-area.png" width="1280" height="720"
+       alt="A cat on a tiled grass background with labels aligned to the four edges of the title-safe area.">
+
+  <a class="play" href="SafeArea/SafeArea_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
+  <p class="play-note">Opens in a new tab and runs in this browser. Click the canvas first so it receives the keyboard.</p>
+
+  <nav class="pager pager-before-about" aria-label="Sample navigation">
+    <a class="prev" href="InputSequence.html"><span class="label">Previous</span>Input Sequence</a>
+    <span></span>
+  </nav>
+
+  <section>
+    <h2>About this sample</h2>
+    <p>
+      Safe Area shows how to keep important graphics inside a television's title-safe region. Four
+      labels anchor to the safe area's corners through an aligned SpriteBatch helper rather than
+      assuming that every display exposes its full edge-to-edge image.
+    </p>
+    <p>
+      Move the cat around the repeating background. The camera begins scrolling before the cat
+      reaches the legal edge, accounting for the sprite's own dimensions and easing its velocity
+      with friction after input stops.
+    </p>
+    <p>
+      The original sample can add a translucent red safe-area overlay in Xbox Debug builds. Like
+      the original Windows version, this browser build leaves that diagnostic component disabled.
+    </p>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <table class="controls">
+      <tr><th>Action</th><th>Keyboard</th><th>Gamepad</th></tr>
+      <tr><td>Move the cat</td><td>Arrow keys</td><td>Left stick</td></tr>
+      <tr><td>Exit</td><td><kbd>Esc</kbd></td><td>Back</td></tr>
+    </table>
+    <p class="play-note">In the browser, exiting ends the sample rather than closing the tab.</p>
+  </section>
+
+  <nav class="pager">
+    <a class="prev" href="InputSequence.html"><span class="label">Previous</span>Input Sequence</a>
+    <span></span>
+  </nav>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>
+      The sample is Microsoft's, published under the Microsoft Permissive License.
+      The C++ port and the WebAssembly build are CNA.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

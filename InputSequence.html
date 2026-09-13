@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Input Sequence — CNA Samples</title>
+<meta name="description" content="The XNA Input Sequence sample ported to C++ with CNA: buffered recognition of directional and button combinations.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1 class="site-title"><a href="index.html">CNA Samples</a></h1>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="detail-head">
+    <h1>Input Sequence</h1>
+  </div>
+  <p class="origin">Ported from Microsoft's XNA 4.0 <em>Input Sequence</em>.</p>
+  <p class="sample-source">
+    <a href="https://github.com/libcna/cna-samples/tree/develop/samples/InputSequence">Source for this sample on GitHub ↗</a>
+  </p>
+
+  <img class="shot" src="assets/img/input-sequence.png" width="800" height="480"
+       alt="The move list, the recognized 30 Lives move and its buffered input sequence.">
+
+  <a class="play" href="InputSequence/InputSequence_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
+  <p class="play-note">Opens in a new tab and runs in this browser. Click the canvas first so it receives the keyboard.</p>
+
+  <nav class="pager pager-before-about" aria-label="Sample navigation">
+    <a class="prev" href="InputReporter.html"><span class="label">Previous</span>Input Reporter</a>
+    <span></span>
+  </nav>
+
+  <section>
+    <h2>About this sample</h2>
+    <p>
+      Input Sequence demonstrates how a game can buffer directional and face-button presses, then
+      recognize the longest matching move. Its examples range from a single Jump or Punch through
+      simultaneous Jump Kick input, Fireball and the ten-step 30 Lives sequence.
+    </p>
+    <p>
+      Inputs expire after 500 milliseconds of inactivity. Presses less than 100 milliseconds apart
+      can merge into one step, while direction changes remain separate so impossible combinations
+      are not introduced. Completed non-sub-moves consume the buffer, and the recognized move stays
+      highlighted for one second.
+    </p>
+    <p>
+      The sample tracks two players. Keyboard input controls player one; connected gamepads can
+      provide the same eight-way directions and A/B/X/Y face-button combinations.
+    </p>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <table class="controls">
+      <tr><th>Action</th><th>Keyboard</th><th>Gamepad</th></tr>
+      <tr><td>Direction</td><td>Arrow keys</td><td>D-pad or left stick</td></tr>
+      <tr><td>Face buttons</td><td><kbd>A</kbd>, <kbd>B</kbd>, <kbd>X</kbd>, <kbd>Y</kbd></td><td>A, B, X, Y</td></tr>
+      <tr><td>Exit</td><td><kbd>Esc</kbd></td><td>Back</td></tr>
+    </table>
+    <p class="play-note">In the browser, exiting ends the sample rather than closing the tab.</p>
+  </section>
+
+  <nav class="pager">
+    <a class="prev" href="InputReporter.html"><span class="label">Previous</span>Input Reporter</a>
+    <span></span>
+  </nav>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>
+      The sample is Microsoft's, published under the Microsoft Permissive License.
+      The C++ port and the WebAssembly build are CNA.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

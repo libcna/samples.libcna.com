@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shape Rendering — CNA Samples</title>
+<meta name="description" content="The XNA Shape Rendering Sample ported to C++ with CNA: batched debug lines for common bounding shapes.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1 class="site-title"><a href="index.html">CNA Samples</a></h1>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="detail-head">
+    <h1>Shape Rendering</h1>
+  </div>
+  <p class="origin">Ported from Microsoft's XNA 4.0 <em>Shape Rendering Sample</em>.</p>
+  <p class="sample-source">
+    <a href="https://github.com/libcna/cna-samples/tree/develop/samples/ShapeRendering">Source for this sample on GitHub ↗</a>
+  </p>
+
+  <img class="shot" src="assets/img/shape-rendering.png" width="800" height="480"
+       alt="A yellow box, green frustum, red sphere, purple triangle and brown line rotating on a blue background.">
+
+  <a class="play" href="ShapeRendering/ShapeRendering_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
+  <p class="play-note">Opens in a new tab and runs in this browser. Click the canvas first so it receives the keyboard.</p>
+
+  <nav class="pager pager-before-about" aria-label="Sample navigation">
+    <a class="prev" href="SpriteSheet.html"><span class="label">Previous</span>Sprite Sheet</a>
+    <span></span>
+  </nav>
+
+  <section>
+    <h2>About this sample</h2>
+    <p>
+      Games often draw temporary geometry to inspect collision volumes, view frustums and other
+      otherwise invisible state. This sample supplies a reusable <code>DebugShapeRenderer</code>
+      for lines, triangles, boxes, spheres and frustums.
+    </p>
+    <p>
+      Any part of a game can queue a shape for the next draw. A shape can last for one frame or for
+      a chosen lifetime, after which its cached object is recycled. The renderer combines the
+      queued lines into as few draw calls as possible while respecting XNA's Reach-profile limit.
+    </p>
+    <p>
+      The original marks the renderer entry points with <code>Conditional("DEBUG")</code>, so the
+      visible demonstration is its original Debug configuration. This browser package keeps that
+      exact source behavior while using optimized, symbol-free Release code generation for static
+      hosting.
+    </p>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <table class="controls">
+      <tr><th>Action</th><th>Keyboard</th><th>Gamepad</th></tr>
+      <tr><td>Exit</td><td><kbd>Esc</kbd></td><td><kbd>Back</kbd></td></tr>
+    </table>
+    <p class="play-note">In the browser, exiting ends the sample rather than closing the tab.</p>
+  </section>
+
+  <nav class="pager">
+    <a class="prev" href="SpriteSheet.html"><span class="label">Previous</span>Sprite Sheet</a>
+    <span></span>
+  </nav>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>
+      The sample is Microsoft's, published under the Microsoft Permissive License.
+      The C++ port and the WebAssembly build are CNA.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

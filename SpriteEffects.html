@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sprite Effects — CNA Samples</title>
+<meta name="description" content="The XNA Sprite Effects Sample ported to C++ with CNA: five animated pixel-shader effects drawn through SpriteBatch.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1 class="site-title"><a href="index.html">CNA Samples</a></h1>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="detail-head">
+    <h1>Sprite Effects</h1>
+  </div>
+  <p class="origin">Ported from Microsoft's XNA 4.0 <em>Sprite Effects Sample</em>.</p>
+  <p class="sample-source">
+    <a href="https://github.com/libcna/cna-samples/tree/develop/samples/SpriteEffects">Source for this sample on GitHub ↗</a>
+  </p>
+
+  <img class="shot" src="assets/img/sprite-effects.png" width="800" height="480"
+       alt="A cat lit by an animated normal map over a snowy glacier background.">
+
+  <a class="play" href="SpriteEffects/SpriteEffects_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
+  <p class="play-note">Opens in a new tab and runs in this browser. Click the canvas first so it receives the keyboard.</p>
+
+  <nav class="pager pager-before-about" aria-label="Sample navigation">
+    <a class="prev" href="ReachGraphicsDemo.html"><span class="label">Previous</span>Reach Graphics Demo</a>
+    <span></span>
+  </nav>
+
+  <section>
+    <h2>About this sample</h2>
+    <p>
+      This sample demonstrates five custom pixel-shader techniques while keeping the familiar
+      SpriteBatch drawing model. It begins with four views of a glacier at different saturation
+      levels, including one that pulses between colour and grayscale.
+    </p>
+    <p>
+      The remaining views dissolve a moving cat with a scrolling overlay, refract the cat, refract
+      the glacier itself, and light a two-dimensional cat in real time with a normal map. The
+      animations make effect parameters and secondary texture samplers visible rather than merely
+      compiling them.
+    </p>
+    <p>
+      Two sample-owned XNA Content Pipeline processors prepare the original textures: one combines
+      the cat image with a separate alpha image, and the other converts a depth image into signed
+      normal vectors. The browser build consumes those original compiled XNA assets along with all
+      four original compiled effects.
+    </p>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <table class="controls">
+      <tr><th>Action</th><th>Keyboard</th><th>Gamepad</th></tr>
+      <tr><td>Next effect</td><td><kbd>Space</kbd></td><td><kbd>A</kbd></td></tr>
+      <tr><td>Exit</td><td><kbd>Esc</kbd></td><td><kbd>Back</kbd></td></tr>
+    </table>
+    <p class="play-note">
+      The sequence wraps after normal-mapped lighting. In the browser, exiting ends the sample
+      rather than closing the tab.
+    </p>
+  </section>
+
+  <nav class="pager">
+    <a class="prev" href="ReachGraphicsDemo.html"><span class="label">Previous</span>Reach Graphics Demo</a>
+    <span></span>
+  </nav>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>
+      The sample is Microsoft's, published under the Microsoft Permissive License.
+      The C++ port and the WebAssembly build are CNA.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

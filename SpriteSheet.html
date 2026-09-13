@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sprite Sheet — CNA Samples</title>
+<meta name="description" content="The XNA Sprite Sheet Sample ported to C++ with CNA: a custom content processor packs eight sprites into one texture atlas.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1 class="site-title"><a href="index.html">CNA Samples</a></h1>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="detail-head">
+    <h1>Sprite Sheet</h1>
+  </div>
+  <p class="origin">Ported from Microsoft's XNA 4.0 <em>Sprite Sheet Sample</em>.</p>
+  <p class="sample-source">
+    <a href="https://github.com/libcna/cna-samples/tree/develop/samples/SpriteSheet">Source for this sample on GitHub ↗</a>
+  </p>
+
+  <img class="shot" src="assets/img/sprite-sheet.png" width="853" height="480"
+       alt="A rotating cat and animated glow beside their combined sprite-sheet texture.">
+
+  <a class="play" href="SpriteSheet/SpriteSheet_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
+  <p class="play-note">Opens in a new tab and runs in this browser. Click the canvas first so it receives the keyboard.</p>
+
+  <nav class="pager pager-before-about" aria-label="Sample navigation">
+    <a class="prev" href="SpriteEffects.html"><span class="label">Previous</span>Sprite Effects</a>
+    <span></span>
+  </nav>
+
+  <section>
+    <h2>About this sample</h2>
+    <p>
+      This sample shows why a texture atlas is useful: the rotating cat and seven-frame glow
+      animation on the left are eight individual sprites, but they all come from the single
+      combined texture displayed on the right.
+    </p>
+    <p>
+      A sample-owned XNA Content Pipeline processor reads an XML list of source images, packs them
+      into a 198 by 264 pixel sheet, and records each sprite's rectangle by name. One pixel of
+      duplicated edge padding around every sprite prevents texture filtering from bleeding colours
+      across neighbouring images.
+    </p>
+    <p>
+      The browser build consumes the original compiled XNA object graph directly. The checkerboard
+      behind the atlas makes its transparent regions visible, while the animation demonstrates that
+      independently addressed frames still draw normally after packing.
+    </p>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <table class="controls">
+      <tr><th>Action</th><th>Keyboard</th><th>Gamepad</th></tr>
+      <tr><td>Exit</td><td><kbd>Esc</kbd></td><td><kbd>Back</kbd></td></tr>
+    </table>
+    <p class="play-note">In the browser, exiting ends the sample rather than closing the tab.</p>
+  </section>
+
+  <nav class="pager">
+    <a class="prev" href="SpriteEffects.html"><span class="label">Previous</span>Sprite Effects</a>
+    <span></span>
+  </nav>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>
+      The sample is Microsoft's, published under the Microsoft Permissive License.
+      The C++ port and the WebAssembly build are CNA.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

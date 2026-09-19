@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transformed Collision Test — CNA Samples</title>
+<meta name="description" content="Microsoft's XNA 4.0 transformed collision test, ported to C++ with CNA and playable in the browser.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1 class="site-title"><a href="index.html">CNA Samples</a></h1>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="detail-head">
+    <h1>Transformed Collision Test</h1>
+  </div>
+  <p class="origin">Ported from the second runnable game in Microsoft's XNA 4.0 <em>Transformed Collision</em> sample.</p>
+  <p class="sample-source">
+    <a href="https://github.com/libcna/cna-samples/tree/develop/samples/TransformedCollisionTest">Source for this sample on GitHub ↗</a>
+  </p>
+
+  <img class="shot" src="assets/img/transformed-collision-test.png" width="800" height="480"
+       alt="Two movable letter sprites, F and R, above a grey view of their collision space.">
+
+  <a class="play" href="TransformedCollisionTest/TransformedCollisionTest_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
+  <p class="play-note">Opens in a new tab. Click the canvas so it receives mouse and keyboard input.</p>
+
+  <nav class="pager pager-before-about" aria-label="Sample navigation">
+    <a class="prev" href="TransformedCollision.html"><span class="label">Previous</span>Transformed Collision</a>
+    <span></span>
+  </nav>
+
+  <section>
+    <h2>About this sample</h2>
+    <p>
+      Transform the F and R sprites and watch the background turn red when their
+      visible pixels intersect. The grey drawing shows one sprite in the other's
+      local coordinate space, making rotation, scale and origin changes visible.
+    </p>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <table class="controls">
+      <tr><th>Action</th><th>Mouse / keyboard</th><th>Gamepad</th></tr>
+      <tr><td>Move sprite</td><td>Drag F with left button; R with right button</td><td>Hold its trigger and move left stick</td></tr>
+      <tr><td>Move origin</td><td>Hold Left Ctrl while dragging</td><td>Hold its shoulder and move left stick</td></tr>
+      <tr><td>Rotate</td><td>Mouse wheel or Left / Right arrow while dragging</td><td>Hold its trigger and move right stick horizontally</td></tr>
+      <tr><td>Scale</td><td>Alt + mouse wheel or Up / Down arrow while dragging</td><td>Hold its trigger and move right stick vertically</td></tr>
+      <tr><td>Exit</td><td><kbd>Esc</kbd> or close the tab</td><td>Back</td></tr>
+    </table>
+  </section>
+
+  <nav class="pager">
+    <a class="prev" href="TransformedCollision.html"><span class="label">Previous</span>Transformed Collision</a>
+    <span></span>
+  </nav>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>
+      The sample is Microsoft's, published under the Microsoft Permissive License.
+      The C++ port and the WebAssembly build are CNA.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flocking — CNA Samples</title>
+<meta name="description" content="Microsoft's XNA 4.0 Flocking sample, ported to C++ with CNA and playable in the browser.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1 class="site-title"><a href="index.html">CNA Samples</a></h1>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="detail-head">
+    <h1>Flocking</h1>
+  </div>
+  <p class="origin">Ported from Microsoft's XNA 4.0 <em>Flocking</em> sample.</p>
+  <p class="sample-source">
+    <a href="https://github.com/libcna/cna-samples/tree/develop/samples/FlockingSample">Source for this sample on GitHub ↗</a>
+  </p>
+
+  <img class="shot" src="assets/img/flocking.png" width="800" height="480"
+       alt="A flock of small birds scatters around a cat on a blue field, with two distance sliders above.">
+
+  <a class="play" href="FlockingSample/FlockingSample_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
+  <p class="play-note">Opens in a new tab. Press Y to add the cat, then tune the flock with the arrow keys.</p>
+
+  <nav class="pager pager-before-about" aria-label="Sample navigation">
+    <a class="prev" href="WaypointSample.html"><span class="label">Previous</span>Waypoint Navigation</a>
+    <span></span>
+  </nav>
+
+  <section>
+    <h2>About this sample</h2>
+    <p>
+      Each bird aligns with nearby birds, moves toward the group, keeps its distance
+      from close neighbours and flees the cat. Change the detection and separation
+      distances to see how the flock responds.
+    </p>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <table class="controls">
+      <tr><th>Action</th><th>Keyboard</th><th>Gamepad</th></tr>
+      <tr><td>Select a distance slider</td><td>Up / Down</td><td>D-pad Up / Down</td></tr>
+      <tr><td>Change the selected distance</td><td>Left / Right</td><td>D-pad Left / Right or triggers</td></tr>
+      <tr><td>Add or remove the cat</td><td>Y</td><td>Y</td></tr>
+      <tr><td>Move the cat</td><td>W / A / S / D</td><td>Left thumbstick</td></tr>
+      <tr><td>Reset the distances</td><td>B</td><td>B</td></tr>
+      <tr><td>Reset the flock</td><td>X</td><td>X</td></tr>
+      <tr><td>Exit</td><td>Escape</td><td>Back</td></tr>
+    </table>
+  </section>
+
+  <nav class="pager">
+    <a class="prev" href="WaypointSample.html"><span class="label">Previous</span>Waypoint Navigation</a>
+    <span></span>
+  </nav>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>
+      The sample is Microsoft's, published under the Microsoft Permissive License.
+      The C++ port and the WebAssembly build are CNA.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

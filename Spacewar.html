@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spacewar — CNA Samples</title>
+<meta name="description" content="Microsoft's Spacewar Starter Kit ported to C++ with CNA, with original Retro and Evolved modes playable in the browser.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1 class="site-title"><a href="index.html">CNA Samples</a></h1>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="detail-head">
+    <h1>Spacewar</h1>
+  </div>
+  <p class="origin">Ported from Microsoft's XNA <em>Spacewar Starter Kit</em>.</p>
+  <p class="sample-source">
+    <a href="https://github.com/libcna/cna-samples/tree/develop/samples/Spacewar">Source for this sample on GitHub ↗</a>
+  </p>
+
+  <img class="shot" src="assets/img/spacewar.png" width="1200" height="690"
+       alt="The Spacewar title screen with a rocket, sun and Retro and Evolved choices.">
+
+  <a class="play" href="Spacewar/Spacewar_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
+  <p class="play-note">Opens in a new tab. Click the canvas first so it receives keyboard input and starts audio.</p>
+
+  <nav class="pager pager-before-about" aria-label="Sample navigation">
+    <a class="prev" href="Platformer.html"><span class="label">Previous</span>Platformer</a>
+    <span></span>
+  </nav>
+
+  <section>
+    <h2>About this sample</h2>
+    <p>
+      Spacewar is a two-player starship battle around a dangerous sun. Choose the line-drawn Retro
+      mode or the Evolved mode with textured 3D ships and effects. Destroy the other ship, avoid the
+      sun's gravity, and spend points on weapons between rounds.
+    </p>
+    <p>
+      The browser build uses the original compiled XNA content and XACT sound banks. Its settings,
+      including controls, are loaded from the original XML document.
+    </p>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <table class="controls">
+      <tr><th>Action</th><th>Player 1</th><th>Player 2</th></tr>
+      <tr><td>Choose Retro / Evolved / Info</td><td><kbd>G</kbd> / <kbd>V</kbd> / <kbd>F</kbd></td><td><kbd>End</kbd> / <kbd>Home</kbd> / <kbd>Page Up</kbd></td></tr>
+      <tr><td>Rotate and thrust</td><td><kbd>A</kbd>/<kbd>D</kbd> and <kbd>W</kbd>/<kbd>S</kbd></td><td>Arrow keys</td></tr>
+      <tr><td>Fire / hyperspace</td><td><kbd>V</kbd> / <kbd>G</kbd></td><td><kbd>Home</kbd> / <kbd>End</kbd></td></tr>
+      <tr><td>Start / return to title</td><td>Left <kbd>Ctrl</kbd></td><td>Right <kbd>Ctrl</kbd></td></tr>
+      <tr><td>Pause / back</td><td>Left <kbd>Shift</kbd></td><td>Right <kbd>Shift</kbd></td></tr>
+    </table>
+  </section>
+
+  <nav class="pager">
+    <a class="prev" href="Platformer.html"><span class="label">Previous</span>Platformer</a>
+    <span></span>
+  </nav>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>
+      The sample is Microsoft's, published under the Microsoft Permissive License.
+      The C++ port and the WebAssembly build are CNA.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

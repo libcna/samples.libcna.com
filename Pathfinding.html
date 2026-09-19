@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pathfinding — CNA Samples</title>
+<meta name="description" content="Microsoft's XNA 4.0 Pathfinding sample, ported to C++ with CNA and playable in the browser.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1 class="site-title"><a href="index.html">CNA Samples</a></h1>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="detail-head">
+    <h1>Pathfinding</h1>
+  </div>
+  <p class="origin">Ported from Microsoft's XNA 4.0 <em>Pathfinding</em> sample.</p>
+  <p class="sample-source">
+    <a href="https://github.com/libcna/cna-samples/tree/develop/samples/Pathfinding">Source for this sample on GitHub ↗</a>
+  </p>
+
+  <img class="shot" src="assets/img/pathfinding.png" width="800" height="480"
+       alt="A tank searches a checkerboard map, with green candidate nodes, red visited nodes and a pathfinding status display.">
+
+  <a class="play" href="Pathfinding/Pathfinding_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
+  <p class="play-note">Opens in a new tab. Press A to start the search.</p>
+
+  <nav class="pager pager-before-about" aria-label="Sample navigation">
+    <a class="prev" href="PathDrawing.html"><span class="label">Previous</span>Path Drawing</a>
+    <span></span>
+  </nav>
+
+  <section>
+    <h2>About this sample</h2>
+    <p>
+      Breadth-first, best-first and A* search look for a route across four tile maps.
+      Green dots mark nodes available to search; red dots mark nodes already visited.
+      When a route is found, the tank follows its waypoints to the destination.
+    </p>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <table class="controls">
+      <tr><th>Action</th><th>Keyboard</th><th>Gamepad</th></tr>
+      <tr><td>Start or stop searching</td><td>A</td><td>A</td></tr>
+      <tr><td>Reset the current map</td><td>B</td><td>B</td></tr>
+      <tr><td>Change search method</td><td>X</td><td>X</td></tr>
+      <tr><td>Next map</td><td>Y</td><td>Y</td></tr>
+      <tr><td>Adjust time step</td><td>Left / Right</td><td>D-pad Left / Right</td></tr>
+    </table>
+  </section>
+
+  <nav class="pager">
+    <a class="prev" href="PathDrawing.html"><span class="label">Previous</span>Path Drawing</a>
+    <span></span>
+  </nav>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>
+      The sample is Microsoft's, published under the Microsoft Permissive License.
+      The C++ port and the WebAssembly build are CNA.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

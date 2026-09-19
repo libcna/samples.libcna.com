@@ -8,7 +8,7 @@ compiled to WebAssembly. Every sample here runs in the browser on WebGL 2.
 ```
 index.html              gallery: one card per sample, thumbnail and name
 <Sample>.html           detail page: full screenshot, description, controls, Play, prev/next
-<Sample>/               the playable bundle: Emscripten .html, .js, .wasm and .data
+<Sample>/               the playable bundle: Emscripten .html, .js, .wasm and optional .data
 assets/site.css         the whole stylesheet
 assets/img/             screenshots, cropped to the game canvas, plus thumbnails
 ```
@@ -24,7 +24,8 @@ is Emscripten's own shell, unmodified.
    required by pthread builds. Configure samples with
    `-DCNA_SAMPLES_ENABLE_EMSCRIPTEN_THREADS=OFF`; `Primitives3D` was 93.5 MB as Debug and is 7.3 MB
    as a non-threaded Release WASM.
-2. Copy the four bundle files into a directory named after the sample.
+2. Copy the bundle files into a directory named after the sample. A `.data` file exists only
+   when the sample packages runtime content; Bounce has no runtime content and needs three files.
 3. Crop a representative screenshot to the game canvas — no browser chrome, no Emscripten shell —
    and save it plus a thumbnail under `assets/img/`.
 4. Write `<Sample>.html` from the original XNA documentation: what the sample teaches, its

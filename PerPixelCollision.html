@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Per-Pixel Collision — CNA Samples</title>
+<meta name="description" content="Microsoft's XNA 4.0 per-pixel collision tutorial, ported to C++ with CNA and playable in the browser.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1 class="site-title"><a href="index.html">CNA Samples</a></h1>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="detail-head">
+    <h1>Per-Pixel Collision</h1>
+  </div>
+  <p class="origin">Ported from Microsoft's XNA 4.0 <em>2D Collision Tutorial 2: Per-Pixel</em>.</p>
+  <p class="sample-source">
+    <a href="https://github.com/libcna/cna-samples/tree/develop/samples/PerPixelCollision">Source for this sample on GitHub ↗</a>
+  </p>
+
+  <img class="shot" src="assets/img/per-pixel-collision.png" width="800" height="480"
+       alt="A falling black block touches the stick-figure player, turning the background red.">
+
+  <a class="play" href="PerPixelCollision/PerPixelCollision_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
+  <p class="play-note">Opens in a new tab. Click the canvas so it receives keyboard input.</p>
+
+  <nav class="pager pager-before-about" aria-label="Sample navigation">
+    <a class="prev" href="CollisionSample.html"><span class="label">Previous</span>Collision Sample</a>
+    <span></span>
+  </nav>
+
+  <section>
+    <h2>About this sample</h2>
+    <p>
+      Move the person under falling blocks. The background turns red only when opaque pixels of
+      the two sprites overlap. Their rectangular bounds can overlap while the visible shapes miss.
+      The sample reads the original texture pixels through <code>Texture2D.GetData</code> and tests
+      the shared area, pixel by pixel.
+    </p>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <table class="controls">
+      <tr><th>Action</th><th>Keyboard</th><th>Gamepad</th></tr>
+      <tr><td>Move person</td><td>Left / Right arrow</td><td>D-pad left / right</td></tr>
+      <tr><td>Exit</td><td><kbd>Esc</kbd> or close the tab</td><td>Back</td></tr>
+    </table>
+  </section>
+
+  <nav class="pager">
+    <a class="prev" href="CollisionSample.html"><span class="label">Previous</span>Collision Sample</a>
+    <span></span>
+  </nav>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>
+      The sample is Microsoft's, published under the Microsoft Permissive License.
+      The C++ port and the WebAssembly build are CNA.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

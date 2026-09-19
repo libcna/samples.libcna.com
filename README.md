@@ -6,7 +6,8 @@ compiled to WebAssembly. Every sample here runs in the browser on WebGL 2.
 ## Layout
 
 ```
-index.html              gallery: one card per sample, thumbnail and name
+index.html              gallery page 1: up to 12 cards, thumbnails and names
+page-N.html             later gallery pages: up to 12 cards each, in the same order
 <Sample>.html           detail page: full screenshot, description, controls, Play, prev/next
 <Sample>/               the playable bundle: Emscripten .html, .js, .wasm and optional .data
 assets/site.css         the whole stylesheet
@@ -31,7 +32,11 @@ is Emscripten's own shell, unmodified.
 4. Write `<Sample>.html` from the original XNA documentation: what the sample teaches, its
    controls, and a direct source link to
    `https://github.com/libcna/cna-samples/tree/develop/samples/<Sample>`.
-5. Add a card to `index.html`, and fix the previous/next links on the neighbouring detail pages.
+5. Add a card to the last gallery page (`index.html`, then `page-2.html`, etc.),
+   creating a new `page-N.html` after each group of 12. Update the shown sample
+   ranges, page links at the top and bottom, and `rel="prev"`/`rel="next"` links
+   on adjacent gallery pages. Keep each card on exactly one page, in publication
+   order. Fix the previous/next links on the neighbouring detail pages.
 
 ## Checking a bundle before publishing it
 

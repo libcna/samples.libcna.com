@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Path Drawing — CNA Samples</title>
+<meta name="description" content="Microsoft's XNA 4.0 Path Drawing sample, ported to C++ with CNA and playable in the browser.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1 class="site-title"><a href="index.html">CNA Samples</a></h1>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="detail-head">
+    <h1>Path Drawing</h1>
+  </div>
+  <p class="origin">Ported from Microsoft's XNA 4.0 <em>Path Drawing</em> sample for Windows Phone.</p>
+  <p class="sample-source">
+    <a href="https://github.com/libcna/cna-samples/tree/develop/samples/PathDrawing">Source for this sample on GitHub ↗</a>
+  </p>
+
+  <img class="shot" src="assets/img/path-drawing.png" width="800" height="480"
+       alt="A tank follows a white path drawn across textured grass.">
+
+  <a class="play" href="PathDrawing/PathDrawing_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
+  <p class="play-note">Opens in a new tab. Drag from the tank with a finger or the left mouse button.</p>
+
+  <nav class="pager pager-before-about" aria-label="Sample navigation">
+    <a class="prev" href="TransformedCollisionTest.html"><span class="label">Previous</span>Transformed Collision Test</a>
+    <span></span>
+  </nav>
+
+  <section>
+    <h2>About this sample</h2>
+    <p>
+      Touch the tank and draw a path through the grass. The sample turns the drag gesture
+      into waypoints, draws the path with PrimitiveBatch and rotates the tank as it drives
+      along it. The original uses touch only; this port also lets a left-mouse drag feed
+      the same touch path.
+    </p>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <table class="controls">
+      <tr><th>Action</th><th>Touch / mouse</th></tr>
+      <tr><td>Draw a path</td><td>Press on the tank and drag</td></tr>
+      <tr><td>Erase the path</td><td>Tap or click the tank</td></tr>
+    </table>
+  </section>
+
+  <nav class="pager">
+    <a class="prev" href="TransformedCollisionTest.html"><span class="label">Previous</span>Transformed Collision Test</a>
+    <span></span>
+  </nav>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>
+      The sample is Microsoft's, published under the Microsoft Permissive License.
+      The C++ port and the WebAssembly build are CNA.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

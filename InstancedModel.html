@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Instanced Model — CNA Samples</title>
+<meta name="description" content="Microsoft's XNA 4.0 Instanced Model sample, ported to C++ with CNA and playable in the browser.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1 class="site-title"><a href="index.html">CNA Samples</a></h1>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="detail-head">
+    <h1>Instanced Model</h1>
+  </div>
+  <p class="origin">Ported from Microsoft's XNA 4.0 <em>Instanced Model</em> sample.</p>
+  <p class="sample-source">
+    <a href="https://github.com/libcna/cna-samples/tree/develop/samples/InstancedModel">Source for this sample on GitHub ↗</a>
+  </p>
+
+  <img class="shot" src="assets/img/instanced-model.png" width="800" height="480"
+       alt="A thousand textured models spinning through nested spirals against a blue background.">
+
+  <a class="play" href="InstancedModel/InstancedModel_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
+  <p class="play-note">Opens in a new tab. Change rendering techniques and instance count to compare them.</p>
+
+  <nav class="pager pager-before-about" aria-label="Sample navigation">
+    <a class="prev" href="BillboardSample.html"><span class="label">Previous</span>Billboard Sample</a>
+    <span></span>
+  </nav>
+
+  <section>
+    <h2>About this sample</h2>
+    <p>
+      Drawing many copies of a model can spend more CPU time on repeated draw calls than on
+      the geometry itself. This sample compares a straightforward loop, a loop that avoids
+      repeated state changes, and hardware instancing that submits the copies in one draw.
+      Each model follows its own animated spiral while the overlay reports the current
+      technique, instance count and frame rate.
+    </p>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <table class="controls">
+      <tr><th>Action</th><th>Keyboard</th><th>Gamepad</th></tr>
+      <tr><td>Change technique</td><td>A</td><td>A</td></tr>
+      <tr><td>Add instances</td><td>X</td><td>X</td></tr>
+      <tr><td>Remove instances</td><td>Y</td><td>Y</td></tr>
+      <tr><td>Exit</td><td>Escape</td><td>Back</td></tr>
+    </table>
+  </section>
+
+  <nav class="pager">
+    <a class="prev" href="BillboardSample.html"><span class="label">Previous</span>Billboard Sample</a>
+    <span></span>
+  </nav>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>
+      The sample is Microsoft's, published under the Microsoft Permissive License.
+      The C++ port and the WebAssembly build are CNA.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

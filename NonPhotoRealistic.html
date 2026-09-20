@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Non-Photorealistic — CNA Samples</title>
+<meta name="description" content="Microsoft's XNA 4.0 Non-Photorealistic rendering sample, ported to C++ with CNA and playable in the browser.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1 class="site-title"><a href="index.html">CNA Samples</a></h1>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="detail-head">
+    <h1>Non-Photorealistic</h1>
+  </div>
+  <p class="origin">Ported from Microsoft's XNA 4.0 <em>Non-Photorealistic</em> sample.</p>
+  <p class="sample-source">
+    <a href="https://github.com/libcna/cna-samples/tree/develop/samples/NonPhotoRealistic">Source for this sample on GitHub ↗</a>
+  </p>
+
+  <img class="shot" src="assets/img/non-photorealistic.png" width="800" height="480"
+       alt="An orange spacecraft drawn with colored hatching over a pale blue textured background.">
+
+  <a class="play" href="NonPhotoRealistic/NonPhotoRealistic_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
+  <p class="play-note">Opens in a new tab. Press A to cycle through six rendering styles.</p>
+
+  <nav class="pager pager-before-about" aria-label="Sample navigation">
+    <a class="prev" href="DistortionSample.html"><span class="label">Previous</span>Distortion</a>
+    <span></span>
+  </nav>
+
+  <section>
+    <h2>About this sample</h2>
+    <p>
+      Toon shading gives the rotating ship sharp bands of light. An edge-detection pass draws
+      outlines from a normal-and-depth render target, while a sketch pass layers a jittered
+      pencil pattern over the scene. Six presets combine these techniques, from a colorful
+      cartoon to monochrome pencil and colored hatching, with an unprocessed view for comparison.
+    </p>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <table class="controls">
+      <tr><th>Action</th><th>Keyboard</th><th>Gamepad</th></tr>
+      <tr><td>Next rendering style</td><td>A</td><td>A</td></tr>
+      <tr><td>Exit</td><td>Escape</td><td>Back</td></tr>
+    </table>
+  </section>
+
+  <nav class="pager">
+    <a class="prev" href="DistortionSample.html"><span class="label">Previous</span>Distortion</a>
+    <span></span>
+  </nav>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>
+      The sample is Microsoft's, published under the Microsoft Permissive License.
+      The C++ port and the WebAssembly build are CNA.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

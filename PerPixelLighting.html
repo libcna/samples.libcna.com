@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Per-Pixel Lighting — CNA Samples</title>
+<meta name="description" content="Microsoft's XNA 4.0 Per-Pixel Lighting sample, ported to C++ with CNA and playable in the browser.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1 class="site-title"><a href="index.html">CNA Samples</a></h1>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="detail-head">
+    <h1>Per-Pixel Lighting</h1>
+  </div>
+  <p class="origin">Ported from Microsoft's XNA 4.0 <em>Per-Pixel Lighting</em> sample.</p>
+  <p class="sample-source">
+    <a href="https://github.com/libcna/cna-samples/tree/develop/samples/PerPixelLighting">Source for this sample on GitHub ↗</a>
+  </p>
+
+  <img class="shot" src="assets/img/per-pixel-lighting.png" width="800" height="480"
+       alt="A shaded sphere over a green reference grid, with the lighting technique and specular settings at upper left.">
+
+  <a class="play" href="PerPixelLighting/PerPixelLighting_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
+  <p class="play-note">Opens in a new tab. Switch between five lighting modes and five meshes.</p>
+
+  <nav class="pager pager-before-about" aria-label="Sample navigation">
+    <a class="prev" href="NormalMappingEffect.html"><span class="label">Previous</span>Normal Mapping</a>
+    <span></span>
+  </nav>
+
+  <section>
+    <h2>About this sample</h2>
+    <p>
+      Compare diffuse and Phong lighting calculated at vertices or at pixels. Switch among a
+      high-resolution sphere, low-resolution sphere, cylinder, cone and cube to see how mesh
+      geometry changes the result. You can also adjust the specular highlight and move the camera.
+    </p>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <table class="controls">
+      <tr><th>Action</th><th>Keyboard</th><th>Gamepad</th></tr>
+      <tr><td>Next lighting mode</td><td>Space</td><td>Y</td></tr>
+      <tr><td>Next mesh</td><td>Tab</td><td>X</td></tr>
+      <tr><td>Rotate mesh</td><td>Arrow keys</td><td>Left stick</td></tr>
+      <tr><td>Move camera</td><td>W, A, S, D</td><td>Right stick</td></tr>
+      <tr><td>Zoom</td><td>Z and X</td><td>Triggers</td></tr>
+      <tr><td>Specular power</td><td>Numeric keypad * and /</td><td>D-pad left and right</td></tr>
+      <tr><td>Specular intensity</td><td>Numeric keypad + and −</td><td>D-pad up and down</td></tr>
+      <tr><td>Exit</td><td>Escape</td><td>Back</td></tr>
+    </table>
+  </section>
+
+  <nav class="pager">
+    <a class="prev" href="NormalMappingEffect.html"><span class="label">Previous</span>Normal Mapping</a>
+    <span></span>
+  </nav>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>
+      The sample is Microsoft's, published under the Microsoft Permissive License.
+      The C++ port and the WebAssembly build are CNA.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lens Flare — CNA Samples</title>
+<meta name="description" content="Microsoft's XNA 4.0 Lens Flare sample, ported to C++ with CNA. Known WebGL 2 limitation: the sun glow and lens flares are not visible.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1 class="site-title"><a href="index.html">CNA Samples</a></h1>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="detail-head">
+    <h1>Lens Flare</h1>
+  </div>
+  <p class="origin">Ported from Microsoft's XNA 4.0 <em>Lens Flare</em> sample.</p>
+  <p class="sample-source">
+    <a href="https://github.com/libcna/cna-samples/tree/develop/samples/LensFlare">Source for this sample on GitHub ↗</a>
+  </p>
+
+  <div class="known-limitation" role="note" aria-label="Known rendering limitation">
+    <p><strong>Known OpenGL ES 3 / WebGL 2 limitation:</strong> the terrain and its lighting render, but the sun glow and lens flares are effectively invisible. CNA does not yet implement a precise occlusion-count fallback for these renderers. This difference from the XNA original is knowingly accepted for this gallery release.</p>
+  </div>
+
+  <img class="shot" src="assets/img/lens-flare.png" width="800" height="480"
+       alt="The actual WebGL 2 result: a textured, lit mountain valley and blue sky, without the original's sun glow or lens flares.">
+
+  <a class="play" href="LensFlare/LensFlare_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
+  <p class="play-note">Opens in a new tab. The known missing glow and lens flares also apply during play.</p>
+
+  <nav class="pager pager-before-about" aria-label="Sample navigation">
+    <a class="prev" href="InstancedModel.html"><span class="label">Previous</span>Instanced Model</a>
+    <span></span>
+  </nav>
+
+  <section>
+    <h2>About this sample</h2>
+    <p>
+      Move through a textured mountain landscape while a camera-facing light source
+      changes position in the view. The original XNA version uses an occlusion query
+      to fade a bright sun glow and ten lens-flare sprites as terrain blocks the light.
+      The camera and terrain work here, but WebGL 2 supplies only a boolean query
+      result; CNA's general count fallback has not yet been implemented.
+    </p>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <table class="controls">
+      <tr><th>Action</th><th>Keyboard</th><th>Gamepad</th></tr>
+      <tr><td>Look around</td><td>Arrow keys</td><td>Right stick</td></tr>
+      <tr><td>Move</td><td>W, A, S, D</td><td>Left stick</td></tr>
+      <tr><td>Reset camera</td><td>R</td><td>Press right stick</td></tr>
+      <tr><td>Exit</td><td>Escape</td><td>Back</td></tr>
+    </table>
+  </section>
+
+  <nav class="pager">
+    <a class="prev" href="InstancedModel.html"><span class="label">Previous</span>Instanced Model</a>
+    <span></span>
+  </nav>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>
+      The sample is Microsoft's, published under the Microsoft Permissive License.
+      The C++ port and the WebAssembly build are CNA.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

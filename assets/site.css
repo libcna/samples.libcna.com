@@ -184,6 +184,21 @@ a { color: var(--accent); }
     font-size: 14px;
 }
 
+.card .card-limitation {
+    margin-top: 10px;
+    color: var(--ink);
+}
+
+.known-limitation {
+    margin: 0 0 24px;
+    padding: 16px 20px;
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    background: var(--accent-soft);
+}
+
+.known-limitation p { margin: 0; }
+
 /* ---------- detail ---------- */
 
 .detail-head {

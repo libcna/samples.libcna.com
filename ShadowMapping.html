@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shadow Mapping — CNA Samples</title>
+<meta name="description" content="Microsoft's XNA 4.0 Shadow Mapping sample, ported to C++ with CNA and playable in the browser.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1 class="site-title"><a href="index.html">CNA Samples</a></h1>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="detail-head">
+    <h1>Shadow Mapping</h1>
+  </div>
+  <p class="origin">Ported from Microsoft's XNA 4.0 <em>Shadow Mapping</em> sample.</p>
+  <p class="sample-source">
+    <a href="https://github.com/libcna/cna-samples/tree/develop/samples/ShadowMapping">Source for this sample on GitHub ↗</a>
+  </p>
+
+  <img class="shot" src="assets/img/shadow-mapping.png" width="800" height="480"
+       alt="An armored character casting a shadow on a checkerboard floor, with a preview of the shadow map at top left.">
+
+  <a class="play" href="ShadowMapping/ShadowMapping_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
+  <p class="play-note">Opens in a new tab. Move the camera to see how the shadow map follows its view.</p>
+
+  <nav class="pager pager-before-about" aria-label="Sample navigation">
+    <a class="prev" href="RimLighting.html"><span class="label">Previous</span>Rim Lighting</a>
+    <span></span>
+  </nav>
+
+  <section>
+    <h2>About this sample</h2>
+    <p>
+      A directional light casts the character's shadow across a checkerboard floor. The sample
+      first renders depth from the light into a floating-point shadow map, then uses that map when
+      drawing the scene. Its projection follows the camera's visible frustum; the small square at
+      the upper left previews the current map.
+    </p>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <table class="controls">
+      <tr><th>Action</th><th>Keyboard</th><th>Gamepad</th></tr>
+      <tr><td>Turn the camera</td><td>Arrow keys</td><td>Right stick</td></tr>
+      <tr><td>Move the camera</td><td>W, A, S, D</td><td>Left stick</td></tr>
+      <tr><td>Rotate the character</td><td>Q and E</td><td>Left and right triggers</td></tr>
+      <tr><td>Reset the camera</td><td>R</td><td>Press right stick</td></tr>
+      <tr><td>Exit</td><td>Escape</td><td>Back</td></tr>
+    </table>
+  </section>
+
+  <nav class="pager">
+    <a class="prev" href="RimLighting.html"><span class="label">Previous</span>Rim Lighting</a>
+    <span></span>
+  </nav>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>
+      The sample is Microsoft's, published under the Microsoft Permissive License.
+      The C++ port and the WebAssembly build are CNA.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

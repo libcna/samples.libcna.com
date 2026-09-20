@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Distortion — CNA Samples</title>
+<meta name="description" content="Microsoft's XNA 4.0 Distortion sample, ported to C++ with CNA and playable in the browser.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1 class="site-title"><a href="index.html">CNA Samples</a></h1>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="detail-head">
+    <h1>Distortion</h1>
+  </div>
+  <p class="origin">Ported from Microsoft's XNA 4.0 <em>Distortion</em> sample.</p>
+  <p class="sample-source">
+    <a href="https://github.com/libcna/cna-samples/tree/develop/samples/DistortionSample">Source for this sample on GitHub ↗</a>
+  </p>
+
+  <img class="shot" src="assets/img/distortion-sample.png" width="800" height="480"
+       alt="A translucent figure warping a sunset landscape, with control hints at the top left.">
+
+  <a class="play" href="DistortionSample/DistortionSample_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
+  <p class="play-note">Opens in a new tab. Use A to change the distorter, B to inspect its map, and X to toggle blur.</p>
+
+  <nav class="pager pager-before-about" aria-label="Sample navigation">
+    <a class="prev" href="BloomSample.html"><span class="label">Previous</span>Bloom Postprocess</a>
+    <span></span>
+  </nav>
+
+  <section>
+    <h2>About this sample</h2>
+    <p>
+      A scene is rendered to a texture, while a model generates a two-dimensional map of how to
+      displace its pixels. A final pass applies that map to the scene. Switch between a Pull-In
+      invisibility cloak, animated Heat-Haze and Displacement-Mapped privacy glass; the optional
+      Gaussian blur softens the distorted region.
+    </p>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <table class="controls">
+      <tr><th>Action</th><th>Keyboard</th><th>Gamepad</th></tr>
+      <tr><td>Next distorter</td><td>A or Space</td><td>A</td></tr>
+      <tr><td>Show distortion map</td><td>B or Tab</td><td>B</td></tr>
+      <tr><td>Toggle blur</td><td>X or Left Ctrl</td><td>X</td></tr>
+      <tr><td>Rotate camera</td><td>Left / Right arrows</td><td>Left stick</td></tr>
+      <tr><td>Exit</td><td>Escape</td><td>Back</td></tr>
+    </table>
+  </section>
+
+  <nav class="pager">
+    <a class="prev" href="BloomSample.html"><span class="label">Previous</span>Bloom Postprocess</a>
+    <span></span>
+  </nav>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>
+      The sample is Microsoft's, published under the Microsoft Permissive License.
+      The C++ port and the WebAssembly build are CNA.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

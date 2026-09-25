@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPU Skinning — CNA Samples</title>
+<meta name="description" content="Microsoft's XNA 4.0 CPU Skinning sample, ported to C++ with CNA. Compare CPU and GPU skeletal animation of the same character.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="site-head"><div class="wrap"><h1 class="site-title"><a href="index.html">CNA Samples</a></h1></div></header>
+<main class="wrap">
+  <div class="detail-head"><h1>CPU Skinning</h1></div>
+  <p class="origin">Ported from Microsoft's XNA 4.0 <em>CPU Skinning Demo</em>.</p>
+  <p class="sample-source"><a href="https://github.com/libcna/cna-samples/tree/develop/samples/CPUSkinning">Source for this sample on GitHub ↗</a></p>
+  <img class="shot" src="assets/img/cpu-skinning.png" width="800" height="480" alt="An animated armored character against a black background, with FPS and GPU skinning labels.">
+  <a class="play" href="CPUSkinning/CPUSkinning_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
+  <p class="play-note">Opens in a new tab.</p>
+  <nav class="pager pager-before-about" aria-label="Sample navigation">
+    <a class="prev" href="SkinnedModelExtensions.html"><span class="label">Previous</span>Skinned Model Extensions</a><span></span>
+  </nav>
+  <section><h2>About this sample</h2>
+    <p>The same animated character is processed into two model assets. The GPU path uses a
+       SkinnedEffect; the CPU path blends four bone transforms per vertex, uploads the resulting
+       vertices each frame and draws them with BasicEffect. The sample displays the active mode
+       and frame rate.</p>
+  </section>
+  <section><h2>Controls</h2><table class="controls">
+    <tr><th>Action</th><th>Control</th></tr>
+    <tr><td>Switch CPU and GPU skinning</td><td>Right click or tap</td></tr>
+    <tr><td>Rotate the camera</td><td>Left mouse button and drag, or touch drag</td></tr>
+  </table></section>
+  <nav class="pager" aria-label="Sample navigation">
+    <a class="prev" href="SkinnedModelExtensions.html"><span class="label">Previous</span>Skinned Model Extensions</a><span></span>
+  </nav>
+</main>
+<footer class="site-foot"><div class="wrap"><p>The sample is Microsoft's, published under the Microsoft Permissive License. The C++ port and the WebAssembly build are CNA.</p></div></footer>
+</body>
+</html>

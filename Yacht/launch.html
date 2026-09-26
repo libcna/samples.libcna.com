@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Starting Yacht</title></head>
+<body>
+<p id="status">Preparing Yacht…</p>
+<script>
+(async () => {
+    try {
+        if (!('serviceWorker' in navigator)) throw new Error('Service workers are required for this threaded game.');
+        await navigator.serviceWorker.register('./coi-sw.js', {scope: './'});
+        await navigator.serviceWorker.ready;
+        if (!navigator.serviceWorker.controller) {
+            await new Promise(resolve => navigator.serviceWorker.addEventListener('controllerchange', resolve, {once: true}));
+        }
+        // A newly claimed page still has the headers of its first, unisolated navigation.
+        // Reload the launcher through its worker before entering the threaded bundle.
+        if (!crossOriginIsolated) {
+            if (sessionStorage.getItem('yacht-isolation-reload'))
+                throw new Error('The browser did not enable cross-origin isolation.');
+            sessionStorage.setItem('yacht-isolation-reload', '1');
+            location.reload();
+            return;
+        }
+        sessionStorage.removeItem('yacht-isolation-reload');
+        location.replace('./Yacht_cna_samples.html');
+    } catch (error) {
+        document.getElementById('status').textContent = 'Yacht cannot start: ' + error;
+    }
+})();
+</script>
+</body>
+</html>

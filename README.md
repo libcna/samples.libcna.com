@@ -49,6 +49,14 @@ grep -ac debug_info <Sample>/<Sample>_cna_samples.wasm
 grep -aEc 'PThread|shared:true|emscripten_thread' <Sample>/<Sample>_cna_samples.js
 ```
 
+## Site icon
+
+`favicon.ico` contains 16, 32, 48 and 64 pixel sizes for browsers that request
+the conventional root icon. Every root-level gallery and detail page links to
+`favicon-32.png` and `apple-touch-icon.png`. The icon is a generated geometric
+C with an orange game pixel on the site's dark blue background. The playable
+Emscripten shells remain unchanged and can use the root `favicon.ico`.
+
 ## Licence
 
 The samples are Microsoft's, published under the Microsoft Permissive License; each sample's

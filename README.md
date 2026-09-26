@@ -15,9 +15,9 @@ assets/img/             screenshots, cropped to the game canvas, plus thumbnails
 ```
 
 A detail page's **Play** button opens the sample in a new tab. Ordinary samples link directly
-to `<Sample>/<Sample>_cna_samples.html`; threaded Marble Maze first opens
-`MarbleMaze/launch.html` to prepare cross-origin isolation, then loads the unmodified
-Emscripten shell.
+to `<Sample>/<Sample>_cna_samples.html`; threaded Marble Maze and Honeycomb Rush first open
+their scoped `launch.html` pages to prepare cross-origin isolation, then load the unmodified
+Emscripten shells.
 
 ## Adding a sample
 
@@ -25,11 +25,12 @@ Emscripten shell.
    that do not use `System.Threading`. A Debug bundle carries DWARF sections and runs to 90 MB or more; GitHub blocks regular Git objects over 100 MB,
    and the rest is wasted bandwidth anyway. Ordinary samples use
    `-DCNA_SAMPLES_ENABLE_EMSCRIPTEN_THREADS=OFF`; `Primitives3D` was 93.5 MB as Debug and is 7.3 MB
-   as a non-threaded Release WASM. `MarbleMaze` needs the original background `System.Threading.Thread`
-   and is built with threads enabled. Its `launch.html` registers a service worker scoped to that game
-   directory; `coi-sw.js` supplies COOP/COEP headers for its same-origin files on static GitHub Pages.
-   The Emscripten shell is unmodified. The exact six-file copy was tested over plain HTTP with a clean
-   Chrome profile, `crossOriginIsolated=true`, gameplay, tilt and pause.
+   as a non-threaded Release WASM. `MarbleMaze` and `HoneycombRush` need their original background
+   `System.Threading.Thread` paths and are built with threads enabled. Each `launch.html` registers
+   a service worker scoped to its game directory; `coi-sw.js` supplies COOP/COEP headers for its
+   same-origin files on static GitHub Pages. The Emscripten shells are unmodified. Both six-file
+   bundles were tested over plain HTTP with clean Chrome profiles, `crossOriginIsolated=true`,
+   gameplay and pause.
 2. Copy the bundle files into a directory named after the sample. A `.data` file exists only
    when the sample packages runtime content; Bounce has no runtime content and needs three files.
 3. Crop a representative screenshot to the game canvas — no browser chrome, no Emscripten shell —
@@ -50,7 +51,7 @@ Emscripten shell.
 grep -ac debug_info <Sample>/<Sample>_cna_samples.wasm
 
 # Ordinary GitHub Pages bundles cannot use pthreads without an isolation launcher.
-# A normal bundle reports 0; MarbleMaze is the documented exception with launch.html/coi-sw.js.
+# A normal bundle reports 0; MarbleMaze and HoneycombRush use launch.html/coi-sw.js.
 grep -aEc 'PThread|shared:true|emscripten_thread' <Sample>/<Sample>_cna_samples.js
 ```
 

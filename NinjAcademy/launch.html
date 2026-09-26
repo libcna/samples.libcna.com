@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Starting NinjAcademy</title></head>
+<body>
+<p id="status">Preparing NinjAcademy…</p>
+<script>
+(async () => {
+    try {
+        if (!('serviceWorker' in navigator)) throw new Error('Service workers are required for this threaded game.');
+        await navigator.serviceWorker.register('./coi-sw.js', {scope: './'});
+        await navigator.serviceWorker.ready;
+        if (!navigator.serviceWorker.controller) {
+            await new Promise(resolve => navigator.serviceWorker.addEventListener('controllerchange', resolve, {once: true}));
+        }
+        location.replace('./NinjAcademy_cna_samples.html');
+    } catch (error) {
+        document.getElementById('status').textContent = 'NinjAcademy cannot start: ' + error;
+    }
+})();
+</script>
+</body>
+</html>

@@ -14,17 +14,22 @@ assets/site.css         the whole stylesheet
 assets/img/             screenshots, cropped to the game canvas, plus thumbnails
 ```
 
-A detail page's **Play** button opens `<Sample>/<Sample>_cna_samples.html` in a new tab. That file
-is Emscripten's own shell, unmodified.
+A detail page's **Play** button opens the sample in a new tab. Ordinary samples link directly
+to `<Sample>/<Sample>_cna_samples.html`; threaded Marble Maze first opens
+`MarbleMaze/launch.html` to prepare cross-origin isolation, then loads the unmodified
+Emscripten shell.
 
 ## Adding a sample
 
-1. Build the sample's WEBGL2 bundle **in Release with Emscripten threads disabled**. A Debug bundle
-   carries DWARF sections and runs to 90 MB or more; GitHub blocks regular Git objects over 100 MB,
-   and the rest is wasted bandwidth anyway. GitHub Pages also cannot set the COOP/COEP headers
-   required by pthread builds. Configure samples with
+1. Build the sample's WEBGL2 bundle in **Release**. Disable Emscripten threads for samples
+   that do not use `System.Threading`. A Debug bundle carries DWARF sections and runs to 90 MB or more; GitHub blocks regular Git objects over 100 MB,
+   and the rest is wasted bandwidth anyway. Ordinary samples use
    `-DCNA_SAMPLES_ENABLE_EMSCRIPTEN_THREADS=OFF`; `Primitives3D` was 93.5 MB as Debug and is 7.3 MB
-   as a non-threaded Release WASM.
+   as a non-threaded Release WASM. `MarbleMaze` needs the original background `System.Threading.Thread`
+   and is built with threads enabled. Its `launch.html` registers a service worker scoped to that game
+   directory; `coi-sw.js` supplies COOP/COEP headers for its same-origin files on static GitHub Pages.
+   The Emscripten shell is unmodified. The exact six-file copy was tested over plain HTTP with a clean
+   Chrome profile, `crossOriginIsolated=true`, gameplay, tilt and pause.
 2. Copy the bundle files into a directory named after the sample. A `.data` file exists only
    when the sample packages runtime content; Bounce has no runtime content and needs three files.
 3. Crop a representative screenshot to the game canvas — no browser chrome, no Emscripten shell —
@@ -44,8 +49,8 @@ is Emscripten's own shell, unmodified.
 # Release bundles have no DWARF. A non-zero count here means it is a Debug build.
 grep -ac debug_info <Sample>/<Sample>_cna_samples.wasm
 
-# GitHub Pages cannot set COOP/COEP headers, so pthread/shared-memory runtime markers
-# must all be absent. A valid static bundle reports 0.
+# Ordinary GitHub Pages bundles cannot use pthreads without an isolation launcher.
+# A normal bundle reports 0; MarbleMaze is the documented exception with launch.html/coi-sw.js.
 grep -aEc 'PThread|shared:true|emscripten_thread' <Sample>/<Sample>_cna_samples.js
 ```
 

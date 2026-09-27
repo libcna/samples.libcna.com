@@ -170,6 +170,12 @@ a { color: var(--accent); }
     background: #000;
 }
 
+.card img.portrait-thumb {
+    height: 220px;
+    object-fit: cover;
+    object-position: center 43%;
+}
+
 .card-body { padding: 14px 16px 18px; }
 
 .card h2 {

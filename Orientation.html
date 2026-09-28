@@ -6,7 +6,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" sizes="192x192" href="apple-touch-icon.png">
 <title>Orientation — CNA Samples</title>
-<meta name="description" content="The default landscape guide from Microsoft's XNA 4.0 Windows Phone orientation tutorial, running with CNA and WebGL 2.">
+<meta name="description" content="Rotate and lock a Windows Phone game's orientation using CNA and WebGL 2.">
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
@@ -15,20 +15,22 @@
   <div class="detail-head"><h1>Orientation</h1></div>
   <p class="origin">Ported from Microsoft's XNA 4.0 Orientation Sample for Windows Phone.</p>
   <p class="sample-source"><a href="https://github.com/libcna/cna-samples/tree/develop/samples/Orientation">Source for this sample on GitHub ↗</a></p>
-  <img class="shot" src="assets/img/orientation.png" width="800" height="480" alt="A white 240 by 240 direction guide centered on a cornflower blue landscape screen.">
+  <img class="shot" src="assets/img/orientation.png" width="800" height="480" alt="The running orientation sample: an unlocked direction guide and tap instructions on a blue screen.">
   <a class="play" href="Orientation/Orientation_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
-  <p class="play-note">Opens in a new tab. The supplied landscape scenario displays a static guide; clicking or rotating the browser does not change it.</p>
+  <p class="play-note">Opens in a new tab. Focus the game, then use ↑ for portrait and ← / → for the two landscape positions. Tap or left-click to lock or unlock orientation.</p>
   <nav class="pager pager-before-about" aria-label="Sample navigation">
     <a class="prev" href="ModelImporterSample.html"><span class="label">Previous</span>Custom Model Importer</a><span></span>
   </nav>
   <section><h2>About this sample</h2>
-    <p>This tutorial demonstrates four ways to configure a Windows Phone game's screen orientation. The supplied scenario uses full resolution and the default landscape orientation, with a centered direction guide.</p>
-    <p>The original tutorial asks readers to edit the source to try the other configurations: portrait, half-resolution landscape with hardware scaling, or both orientations with tap-to-lock behavior. These are source configurations rather than modes selected in the running sample.</p>
+    <p>This tutorial demonstrates four ways to configure a Windows Phone game's screen orientation. This port starts in the original tutorial’s fourth configuration: full resolution, portrait and both landscape positions, with tap-to-lock behavior and a centered direction guide.</p>
+    <p>The upstream download starts in a static landscape configuration. At the owner’s request this port selects the existing fourth configuration and enables CNA’s optional keyboard orientation emulation. A position requested while locked takes effect after unlocking. The other tutorial configurations remain source edits.</p>
   </section>
   <section><h2>Controls</h2><table class="controls">
     <tr><th>Action</th><th>Control</th></tr>
     <tr><td>Stop the sample</td><td>Gamepad Back, or close the game tab</td></tr>
-    <tr><td>Default landscape guide</td><td>No active touch or mouse action</td></tr>
+    <tr><td>Portrait</td><td>↑</td></tr>
+    <tr><td>Landscape left / right</td><td>← / →</td></tr>
+    <tr><td>Lock or unlock orientation</td><td>Tap or left-click</td></tr>
   </table></section>
   <nav class="pager" aria-label="Sample navigation">
     <a class="prev" href="ModelImporterSample.html"><span class="label">Previous</span>Custom Model Importer</a><span></span>

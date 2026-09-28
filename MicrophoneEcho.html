@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="192x192" href="apple-touch-icon.png">
+<title>Microphone Echo — CNA Samples</title>
+<meta name="description" content="Capture your microphone, hear a delayed echo and watch its waveform in Microsoft's XNA 4.0 Microphone Echo sample, running with CNA and WebGL 2.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="site-head"><div class="wrap"><h1 class="site-title"><a href="index.html">CNA Samples</a></h1></div></header>
+<main class="wrap">
+  <div class="detail-head"><h1>Microphone Echo</h1></div>
+  <p class="origin">Ported from Microsoft's XNA 4.0 Microphone Echo Sample for Windows, Xbox 360 and Windows Phone.</p>
+  <p class="sample-source"><a href="https://github.com/libcna/cna-samples/tree/develop/samples/MicrophoneEcho">Source for this sample on GitHub ↗</a></p>
+  <img class="shot" src="assets/img/microphone-echo.png" width="800" height="480" alt="The microphone is recording and its white audio waveform is drawn across a blue screen.">
+  <a class="play" href="MicrophoneEcho/MicrophoneEcho_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
+  <p class="play-note">Opens in a new tab. Allow microphone access, focus the game and press A to start. Use headphones to hear the echo without feeding it back into the microphone.</p>
+  <nav class="pager pager-before-about" aria-label="Sample navigation">
+    <a class="prev" href="ContentManifestExtensions.html"><span class="label">Previous</span>Content Manifest Extensions</a><span></span>
+  </nav>
+  <section><h2>About this sample</h2>
+    <p>Capture live microphone audio, add a delayed echo and play it back through the speakers. The sample demonstrates microphone capture events and streaming playback with DynamicSoundEffectInstance.</p>
+    <p>A circular buffer adds a 150 ms delay with half-strength feedback. The screen shows the selected microphone, recording state and the processed audio waveform.</p>
+  </section>
+  <section><h2>Controls</h2><table class="controls">
+    <tr><th>Action</th><th>Control</th></tr>
+    <tr><td>Start recording</td><td>A, gamepad A or tap the screen</td></tr>
+    <tr><td>Stop recording</td><td>B, gamepad B or double-tap the screen</td></tr>
+    <tr><td>Close the sample</td><td>Escape or gamepad Back</td></tr>
+  </table></section>
+  <nav class="pager" aria-label="Sample navigation">
+    <a class="prev" href="ContentManifestExtensions.html"><span class="label">Previous</span>Content Manifest Extensions</a><span></span>
+  </nav>
+</main>
+<footer class="site-foot"><div class="wrap"><p>The sample is Microsoft's, published under the Microsoft Permissive License. The C++ port and the WebAssembly build are CNA.</p></div></footer>
+</body>
+</html>

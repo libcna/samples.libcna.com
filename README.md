@@ -1,15 +1,14 @@
 # samples.libcna.com
 
 The public gallery of XNA 4.0 samples ported to C++ with [CNA](https://github.com/libcna) and
-compiled to WebAssembly where supported. Browser editions run on WebGL 2. The 83 entries
-include 82 playable browser samples and one explicitly marked native-only status page.
+compiled to WebAssembly. Every sample here runs in the browser on WebGL 2.
 
 ## Layout
 
 ```
 index.html              gallery page 1: up to 12 cards, thumbnails and names
 page-N.html             later gallery pages: up to 12 cards each, in the same order
-<Sample>.html           detail page: screenshot, description, controls, status/Play, prev/next
+<Sample>.html           detail page: full screenshot, description, controls, Play, prev/next
 <Sample>/               the playable bundle: Emscripten .html, .js, .wasm and optional .data
 assets/site.css         the whole stylesheet
 assets/img/             screenshots, cropped to the game canvas, plus thumbnails
@@ -44,13 +43,6 @@ Emscripten shells.
    ranges, page links at the top and bottom, and `rel="prev"`/`rel="next"` links
    on adjacent gallery pages. Keep each card on exactly one page, in publication
    order. Fix the previous/next links on the neighbouring detail pages.
-
-### Native-only entries
-
-An explicit owner-approved native scope may be represented by a clearly marked status card and
-detail page. Use a screenshot of actual native gameplay, list the concrete browser gaps, explain
-native setup, and omit the Play button and bundle. NetworkPrediction is the first such entry.
-Do not publish an old menu-only bundle or count the status page as a playable browser sample.
 
 ## Checking a bundle before publishing it
 

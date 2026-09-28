@@ -63,6 +63,14 @@ the conventional root icon. Every root-level gallery and detail page links to
 C with an orange game pixel on the site's dark blue background. The playable
 Emscripten shells remain unchanged and can use the root `favicon.ico`.
 
+## Partial browser implementation
+
+Performance Utility (SAMPLE-104) is explicitly marked **🟡 partially implemented** at the owner's
+request. Its local profiling tools and command console are playable. Browser account transport
+and public SystemLink discovery/join/host/relay are unfinished; the preserved original `remote`
+command cannot connect. The detail page lists this limitation beside Play and links to the sample's
+`diff.md` and CNA's browser network readiness checklist. This entry is not full-network qualification.
+
 ## Licence
 
 The samples are Microsoft's, published under the Microsoft Permissive License; each sample's

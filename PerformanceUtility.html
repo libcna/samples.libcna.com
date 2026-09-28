@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="192x192" href="apple-touch-icon.png">
+<title>Performance Utility — CNA Samples</title>
+<meta name="description" content="XNA profiling tools and a command console, playable with CNA and WebGL 2. Partially implemented: browser remote networking is not available yet.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="site-head"><div class="wrap"><h1 class="site-title"><a href="index.html">CNA Samples</a></h1></div></header>
+<main class="wrap">
+  <div class="detail-head"><h1>Performance Utility</h1></div>
+  <p class="origin">Ported from Microsoft's XNA 4.0 Performance Utility sample for Windows.</p>
+  <p class="sample-source"><a href="https://github.com/libcna/cna-samples/tree/develop/samples/PerformanceUtility">Source for this sample on GitHub ↗</a></p>
+  <p><strong>🟡 Partially implemented on the web.</strong> The local profiling tools and command console work. The original <code>remote</code> command cannot connect yet: browser account sign-in and SystemLink discovery, joining and relay support are unfinished in CNA.</p>
+  <img class="shot" src="assets/img/performance-utility.png" width="800" height="480" alt="The running utility shows a cat, keyboard instructions, FPS and a timing ruler on a blue screen.">
+  <a class="play" href="PerformanceUtility/PerformanceUtility_cna_samples.html" target="_blank" rel="noopener">Play local utility ▸</a>
+  <p class="play-note">Opens in a new tab. Focus the game, press A, B or X to show the counters, and Tab to open the command console.</p>
+  <nav class="pager pager-before-about" aria-label="Sample navigation">
+    <a class="prev" href="Orientation.html"><span class="label">Previous</span>Orientation</a><span></span>
+  </nav>
+  <section><h2>About this sample</h2>
+    <p>This utility demonstrates reusable debug tools: an FPS counter, a nested timing ruler and log, and a command console with help, history and commands. Its demonstration scene draws a cat; the <code>pos</code> command moves it.</p>
+    <p>The original Windows product also includes a SystemLink remote-command client, with the host in the Xbox branch. The command and protocol remain in this port, but the browser cannot use that network feature yet. The initial “Please signed in.” message is not a successful connection.</p>
+  </section>
+  <section><h2>Controls</h2><table class="controls">
+    <tr><th>Action</th><th>Control</th></tr>
+    <tr><td>Show or hide FPS</td><td>A key / gamepad A</td></tr>
+    <tr><td>Show or hide timing ruler</td><td>B key / gamepad B</td></tr>
+    <tr><td>Show or hide timing log</td><td>X key / gamepad X</td></tr>
+    <tr><td>Open or close command console</td><td>Tab</td></tr>
+    <tr><td>Move the cat</td><td>Enter <code>pos 300 200</code> in the console</td></tr>
+    <tr><td>Read position / list commands</td><td><code>pos</code> / <code>help</code></td></tr>
+    <tr><td>Stop the sample</td><td>Escape / gamepad Back, or close the tab</td></tr>
+  </table></section>
+  <section><h2>What remains for web networking</h2>
+    <ul>
+      <li>Shared browser account authentication and deployment support.</li>
+      <li>Public SystemLink session discovery and joining with a reachable host.</li>
+      <li>A browser-capable realtime transport or relay, followed by real client/host command and reply tests.</li>
+    </ul>
+    <p>After CNA's shared network layer is ready, this sample must be rebuilt and tested with genuine signed-in peers. The full completion checklist and implementation locations are in <a href="https://github.com/libcna/cna-samples/blob/develop/samples/PerformanceUtility/diff.md">diff.md</a> and <a href="https://github.com/libcna/cna/blob/next/docs/browser-network-readiness.md">CNA's browser network readiness record</a>.</p>
+  </section>
+  <nav class="pager" aria-label="Sample navigation">
+    <a class="prev" href="Orientation.html"><span class="label">Previous</span>Orientation</a><span></span>
+  </nav>
+</main>
+<footer class="site-foot"><div class="wrap"><p>The sample is Microsoft's, published under the Microsoft Permissive License. The C++ port and the WebAssembly build are CNA.</p></div></footer>
+</body>
+</html>

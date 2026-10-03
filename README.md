@@ -1,15 +1,15 @@
 # samples.libcna.com
 
 The public gallery of XNA 4.0 samples ported to C++ with [CNA](https://github.com/libcna) and
-compiled to WebAssembly. Every sample here runs in the browser on WebGL 2.
+compiled to WebAssembly. Playable entries run in the browser on WebGL 2; an informational entry may omit its bundle when redistribution rights are unresolved.
 
 ## Layout
 
 ```
 index.html              gallery page 1: up to 12 cards, thumbnails and names
 page-N.html             later gallery pages: up to 12 cards each, in the same order
-<Sample>.html           detail page: full screenshot, description, controls, Play, prev/next
-<Sample>/               the playable bundle: Emscripten .html, .js, .wasm and optional .data
+<Sample>.html           detail page: full screenshot, description, status/controls, prev/next
+<Sample>/               the playable bundle when publication is permitted
 assets/site.css         the whole stylesheet
 assets/img/             screenshots, cropped to the game canvas, plus thumbnails
 ```
@@ -63,6 +63,20 @@ the conventional root icon. Every root-level gallery and detail page links to
 C with an orange game pixel on the site's dark blue background. The playable
 Emscripten shells remain unchanged and can use the root `favicon.ico`.
 
+## C++ and C# routes
+
+The playable Web builds in this repository are the C++ ports using CNA's C++ API. They have so far
+been tested on the Web and Linux desktop. The separate
+[CNA.NET sample collection](https://github.com/libcna/cna-cs-samples) runs nearly all of the same
+samples from their original, unchanged C# source through the
+[CNA C# binding](https://github.com/libcna/cna-cs). That route has been tested on the Web, desktop
+and Android; other platforms have not yet been tested.
+
+Racing Game is an informational exception: its screenshot and status page are published, but its
+playable Web bundle is withheld because the available source snapshot has no redistribution grant.
+Its future YouTube and dedicated-repository destinations are shown as forthcoming rather than linked
+to invented URLs.
+
 ## Partial browser implementation
 
 Performance Utility (SAMPLE-104) is explicitly marked **🟡 partially implemented** at the owner's
@@ -73,6 +87,7 @@ command cannot connect. The detail page lists this limitation beside Play and li
 
 ## Licence
 
-The samples are Microsoft's, published under the Microsoft Permissive License; each sample's
-original licence file travels with its source in the CNA samples repository. The C++ port and the
+Most samples are Microsoft's and retain their original Microsoft Permissive License. Each entry
+remains subject to the licence or copyright notice present in its source; Racing Game has no available
+redistribution grant, so its browser bundle is not published. The C++ port and the
 WebAssembly build are CNA's.

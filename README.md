@@ -74,8 +74,8 @@ and Android; other platforms have not yet been tested.
 
 Racing Game is an informational exception: its screenshot and status page are published, but its
 playable Web bundle is withheld because the available source snapshot has no redistribution grant.
-Its future YouTube and dedicated-repository destinations are shown as forthcoming rather than linked
-to invented URLs.
+Its current C++ source links to `cna-samples`; the future YouTube destination is shown as
+forthcoming rather than linked to an invented URL.
 
 ## Partial browser implementation
 

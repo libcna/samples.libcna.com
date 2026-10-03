@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="192x192" href="apple-touch-icon.png">
+<title>Tilt Perspective — CNA Samples</title>
+<meta name="description" content="Balls rolling in a stone box drawn from a viewpoint that follows the phone's tilt, using CNA and WebGL 2.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="site-head"><div class="wrap"><h1 class="site-title"><a href="index.html">CNA Samples</a></h1></div></header>
+<main class="wrap">
+  <div class="detail-head"><h1>Tilt Perspective</h1></div>
+  <p class="origin">Ported from Microsoft's XNA 4.0 Tilt Perspective Sample for Windows Phone.</p>
+  <p class="sample-source"><a href="https://github.com/libcna/cna-samples/tree/develop/samples/TiltPerspective">Source for this sample on GitHub ↗</a></p>
+  <img class="shot" src="assets/img/tilt-perspective.png" width="480" height="800" alt="The running sample: coloured balls in a stone box seen from a tilted viewpoint.">
+  <a class="play" href="TiltPerspective/TiltPerspective_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
+  <p class="play-note">Opens in a new tab. The tilt is simulated, so the box keeps rolling slowly. Hold a touch or the left mouse button to make the current tilt the level one.</p>
+  <nav class="pager pager-before-about" aria-label="Sample navigation">
+    <a class="prev" href="PerformanceUtility.html"><span class="label">Previous</span>Performance Utility</a><span></span>
+  </nav>
+  <section><h2>About this sample</h2>
+    <p>The original sample uses the phone's accelerometer to estimate where the player's eyes are and renders the scene from that viewpoint, so the box of rolling balls appears to sit behind the screen. The same tilt drives the balls. Touching the screen records the current tilt as the level reference.</p>
+    <p>A browser offers this port no phone accelerometer, so it runs the original sample's own emulator path, which simulates a slow, steady circular tilt. At the owner's request, holding the left mouse button acts as the touch through CNA's optional mouse-to-touch emulation.</p>
+  </section>
+  <section><h2>Controls</h2><table class="controls">
+    <tr><th>Action</th><th>Control</th></tr>
+    <tr><td>Stop the sample</td><td>Gamepad Back, or close the game tab</td></tr>
+    <tr><td>Make the current tilt level</td><td>Hold a touch or the left mouse button</td></tr>
+  </table></section>
+  <nav class="pager" aria-label="Sample navigation">
+    <a class="prev" href="PerformanceUtility.html"><span class="label">Previous</span>Performance Utility</a><span></span>
+  </nav>
+</main>
+<footer class="site-foot"><div class="wrap"><p>The sample is Microsoft's, published under the Microsoft Permissive License. The C++ port and the WebAssembly build are CNA.</p></div></footer>
+</body>
+</html>

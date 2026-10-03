@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="192x192" href="apple-touch-icon.png">
+<title>Avatar Animation Blending — CNA Samples</title>
+<meta name="description" content="Blend between four avatar animations over a quarter second, using CNA and WebGL 2.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="site-head"><div class="wrap"><h1 class="site-title"><a href="index.html">CNA Samples</a></h1></div></header>
+<main class="wrap">
+  <div class="detail-head"><h1>Avatar Animation Blending</h1></div>
+  <p class="origin">Ported from Microsoft's XNA 4.0 Avatar Animation Blending Sample for Xbox 360.</p>
+  <p class="sample-source"><a href="https://github.com/libcna/cna-samples/tree/develop/samples/AvatarAnimationBlending">Source for this sample on GitHub ↗</a></p>
+  <img class="shot" src="assets/img/avatar-animation-blending.png" width="1280" height="720" alt="The running sample: a CNA avatar on a blue background with animation blending enabled.">
+  <a class="play" href="AvatarAnimationBlending/AvatarAnimationBlending_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
+  <p class="play-note">Opens in a new tab. Click the game canvas to focus the keyboard. CNA supplies its own avatars and preset motions; their appearance and timing differ from Xbox avatars. Keyboard emulation is enabled alongside gamepad input. <a href="https://github.com/libcna/cna-samples/blob/develop/samples/AvatarAnimationBlending/diff.md">Documented differences ↗</a></p>
+  <nav class="pager pager-before-about" aria-label="Sample navigation">
+    <a class="prev" href="TiltPerspective.html"><span class="label">Previous</span>Tilt Perspective</a><span></span>
+  </nav>
+  <section><h2>About this sample</h2>
+    <p>The sample switches a random avatar between Stand, Celebrate, Clap and Wave. Its own animation implementation interpolates every bone's rotation and translation over 250 milliseconds, producing a smooth transition between the old and new poses. Toggle blending to compare that transition with an immediate switch.</p>
+    <p>The same camera controls let you inspect the motion from different angles, and the right shoulder button creates another random avatar.</p>
+  </section>
+  <section><h2>Controls</h2><table class="controls">
+    <tr><th>Action</th><th>Keyboard</th><th>Gamepad</th></tr>
+    <tr><td>Celebrate / Clap / Stand / Wave</td><td>K / L / J / I</td><td>A / B / X / Y</td></tr>
+    <tr><td>Toggle blending</td><td>Q</td><td>Left shoulder</td></tr>
+    <tr><td>New random avatar</td><td>E</td><td>Right shoulder</td></tr>
+    <tr><td>Orbit camera</td><td>Arrow keys</td><td>Right stick</td></tr>
+    <tr><td>Zoom out / in</td><td>Z / C</td><td>Left / right trigger</td></tr>
+    <tr><td>Reset camera</td><td>Right Shift</td><td>Right stick click</td></tr>
+    <tr><td>Stop the sample</td><td>Escape</td><td>Back</td></tr>
+  </table></section>
+  <nav class="pager" aria-label="Sample navigation">
+    <a class="prev" href="TiltPerspective.html"><span class="label">Previous</span>Tilt Perspective</a><span></span>
+  </nav>
+</main>
+<footer class="site-foot"><div class="wrap"><p>The sample is Microsoft's, published under the Microsoft Permissive License. The C++ port and the WebAssembly build are CNA.</p></div></footer>
+</body>
+</html>

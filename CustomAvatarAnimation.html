@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="192x192" href="apple-touch-icon.png">
+<title>Custom Avatar Animation — CNA Samples</title>
+<meta name="description" content="Play original custom avatar animations and facial expressions, using CNA and WebGL 2.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="site-head"><div class="wrap"><h1 class="site-title"><a href="index.html">CNA Samples</a></h1></div></header>
+<main class="wrap">
+  <div class="detail-head"><h1>Custom Avatar Animation</h1></div>
+  <p class="origin">Ported from Microsoft's XNA 4.0 Custom Avatar Animation Sample for Xbox 360.</p>
+  <p class="sample-source"><a href="https://github.com/libcna/cna-samples/tree/develop/samples/CustomAvatarAnimation">Source for this sample on GitHub ↗</a></p>
+  <img class="shot" src="assets/img/custom-avatar-animation.png" width="1280" height="720" alt="The running sample: a CNA avatar on the original ground model.">
+  <a class="play" href="CustomAvatarAnimation/CustomAvatarAnimation_cna_samples.html" target="_blank" rel="noopener">Play ▸</a>
+  <p class="play-note">Opens in a new tab. Click the game canvas to focus the keyboard. Press E to load a random avatar if none is visible. CNA supplies its own avatars and built-in idles; their appearance and idle timing differ from Xbox avatars. The five custom motions and facial expressions are the original sample data. Keyboard emulation is enabled alongside gamepad input. <a href="https://github.com/libcna/cna-samples/blob/develop/samples/CustomAvatarAnimation/diff.md">Documented differences ↗</a></p>
+  <nav class="pager pager-before-about" aria-label="Sample navigation">
+    <a class="prev" href="ObjectPlacementOnAvatar.html"><span class="label">Previous</span>Object Placement on Avatar</a><span></span>
+  </nav>
+  <section><h2>About this sample</h2>
+    <p>This sample processes avatar FBX animation and expression keyframes through its own Content Pipeline processor. Its player applies the custom bone and facial keys to an avatar, with forward and reverse playback, looping and clamping.</p>
+    <p>Jump, kick, punch and faint, or walk with the left stick. The camera follows the avatar across the original ground model. Four built-in Stand idles are loaded; the original random selection chooses only the first three. You can create a random avatar or reload the signed-in profile.</p>
+  </section>
+  <section><h2>Controls</h2><table class="controls">
+    <tr><th>Action</th><th>Keyboard</th><th>Gamepad</th></tr>
+    <tr><td>Jump / Kick / Punch / Faint</td><td>K / L / J / I</td><td>A / B / X / Y</td></tr>
+    <tr><td>Move / walk</td><td>W / A / S / D</td><td>Left stick</td></tr>
+    <tr><td>Signed-in profile avatar</td><td>Q</td><td>Left shoulder</td></tr>
+    <tr><td>New random avatar</td><td>E</td><td>Right shoulder</td></tr>
+    <tr><td>Orbit camera</td><td>Arrow keys</td><td>Right stick</td></tr>
+    <tr><td>Zoom out / in</td><td>Z / C</td><td>Left / right trigger</td></tr>
+    <tr><td>Reset camera</td><td>Right Shift</td><td>Right stick click</td></tr>
+    <tr><td>Stop the sample</td><td>Escape</td><td>Back</td></tr>
+  </table></section>
+  <nav class="pager" aria-label="Sample navigation">
+    <a class="prev" href="ObjectPlacementOnAvatar.html"><span class="label">Previous</span>Object Placement on Avatar</a><span></span>
+  </nav>
+</main>
+<footer class="site-foot"><div class="wrap"><p>The sample is Microsoft's, published under the Microsoft Permissive License. The C++ port and the WebAssembly build are CNA.</p></div></footer>
+</body>
+</html>
